@@ -20,6 +20,8 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { overflow-x: hidden; }
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -27,6 +29,8 @@ body {
   min-height: 100vh;
   padding: 0 0 80px;
   position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Atmospheric radial gradients on Pearl Bush background */
@@ -1114,14 +1118,16 @@ textarea { resize: vertical; min-height: 72px; line-height: 1.55; }
   .liquido-nome     { font-size: 11px; }
 
   /* ── Datepicker popup não vaza ── */
-  .custom-datepicker-popup { width: calc(100vw - 56px); left: 0; }
+  .custom-datepicker-popup { width: min(284px, calc(100vw - 48px)); left: 0; right: auto; }
 
   /* ── Toast ── */
   .toast-container { right: 10px; left: 10px; }
   .toast           { max-width: 100%; }
 
   /* ── hora resumo ── */
-  .hora-resumo { gap: 18px; }
+  .hora-resumo { gap: 10px 14px; }
+  .resumo-item { flex: 1 1 auto; min-width: 0; }
+  .resumo-value { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   /* ── mensagem RH ── */
   #mensagem-texto { font-size: 11px; padding: 14px; }
