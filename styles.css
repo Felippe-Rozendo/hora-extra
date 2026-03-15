@@ -1064,17 +1064,65 @@ textarea { resize: vertical; min-height: 72px; line-height: 1.55; }
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-  header { padding: 16px 20px; }
-  main { margin: 24px auto; }
-  .field-group { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+
+  /* ── Header ── */
+  header {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .logo-mark { width: 32px; height: 32px; }
+  header h1 { font-size: 13px; }
+  header p  { font-size: 10px; }
+  .header-right {
+    margin-left: auto;
+    gap: 6px;
+  }
+  .tag { font-size: 9px; padding: 3px 8px; }
+
+  /* ── Layout ── */
+  main {
+    margin: 14px auto;
+    padding: 0 12px;
+    gap: 12px;
+  }
+
+  /* ── Cards ── */
+  .card      { padding: 18px 16px; }
+  .hora-card { padding: 14px;      }
+
+  /* ── Field grids ── */
+  .field-group   { grid-template-columns: 1fr; }
   .field-group-3 { grid-template-columns: 1fr 1fr; }
+
+  /* DATA full-width, INÍCIO + FIM lado a lado */
   .hora-grid { grid-template-columns: 1fr 1fr; }
+  .hora-grid .field:first-child { grid-column: 1 / -1; }
+
+  /* ── Results grid ── */
   .breakdown-grid { grid-template-columns: 1fr; }
-  .actions { flex-direction: column; }
-  .btn-calcular { width: 100%; }
-  .liquido-value { font-size: 26px; }
-  .liquido-destaque { padding: 18px 20px; }
-  .toast-container { right: 12px; left: 12px; }
-  .toast { max-width: 100%; }
+
+  /* ── Actions ── */
+  .actions    { flex-direction: column; gap: 10px; }
+  .btn-reset  { width: 100%; justify-content: center; text-align: center; }
+  .btn-calcular { width: 100%; font-size: 14px; padding: 14px; }
+
+  /* ── Resultado ── */
+  .liquido-value    { font-size: 28px; }
+  .liquido-destaque { padding: 16px 18px; flex-direction: column; gap: 10px; }
+  .liquido-nome     { font-size: 11px; }
+
+  /* ── Datepicker popup não vaza ── */
+  .custom-datepicker-popup { width: calc(100vw - 56px); left: 0; }
+
+  /* ── Toast ── */
+  .toast-container { right: 10px; left: 10px; }
+  .toast           { max-width: 100%; }
+
+  /* ── hora resumo ── */
+  .hora-resumo { gap: 18px; }
+
+  /* ── mensagem RH ── */
+  #mensagem-texto { font-size: 11px; padding: 14px; }
 }
