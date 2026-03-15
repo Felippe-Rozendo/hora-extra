@@ -1096,12 +1096,9 @@ textarea { resize: vertical; min-height: 72px; line-height: 1.55; }
   .field-group   { grid-template-columns: 1fr; }
   .field-group-3 { grid-template-columns: 1fr 1fr; }
 
-  /* DATA full-width; INÍCIO + FIM lado a lado
-     min-width: 0 evita o overflow do input[time] no iOS Safari */
-  .hora-grid { grid-template-columns: 1fr 1fr; }
+  /* Todos os campos do hora-grid em coluna única no mobile */
+  .hora-grid { grid-template-columns: 1fr; }
   .hora-grid .field { min-width: 0; }
-  .hora-grid .field:first-child { grid-column: 1 / -1; }
-  input[type="time"] { min-width: 0; width: 100%; box-sizing: border-box; }
 
   /* ── Results grid ── */
   .breakdown-grid { grid-template-columns: 1fr; }
