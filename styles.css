@@ -209,11 +209,14 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  min-width: 0;
 }
+
+.field-group > * { min-width: 0; }
 .field-group-3 { grid-template-columns: 1fr 1fr 1fr; }
 .field-full { grid-column: 1 / -1; }
 
-.field { display: flex; flex-direction: column; gap: 6px; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 
 label {
   font-size: 10px;
@@ -562,7 +565,10 @@ textarea { resize: vertical; min-height: 72px; line-height: 1.55; }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
+  min-width: 0;
 }
+
+.hora-grid > * { min-width: 0; }
 
 .hora-resumo {
   margin-top: 14px;
