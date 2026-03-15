@@ -239,6 +239,8 @@ textarea {
   outline: none;
   transition: border-color .2s, box-shadow .2s;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* hide native select — replaced by custom component */
@@ -1106,9 +1108,13 @@ textarea { resize: vertical; min-height: 72px; line-height: 1.55; }
   .field-group   { grid-template-columns: 1fr; }
   .field-group-3 { grid-template-columns: 1fr 1fr; }
 
-  /* Todos os campos do hora-grid em coluna única no mobile */
-  .hora-grid { grid-template-columns: 1fr; }
-  .hora-grid .field { min-width: 0; }
+  /* Hora-grid vira flex-column — mesma largura que o campo Justificativa */
+  .hora-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
 
   /* ── Results grid ── */
   .breakdown-grid { grid-template-columns: 1fr; }
